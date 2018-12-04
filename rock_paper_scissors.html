@@ -17,7 +17,9 @@
 function game(roundNumber){
   for (i = 0; i < 5; i++){
    let playerSelection = prompt('Rock, Paper, Scissors?');
+    computerPlay();
     playRound() ;
+    console.log(playRound(playerSelection, computerSelection))
 
   }
 }
@@ -57,7 +59,7 @@ function playRound(playerSelection, computerSelection) {
 
 const computerSelection = computerPlay();
 let i=0;
-console.log(playRound(playerSelection, computerSelection))
+game();
   
 //Format Inputs
 
