@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+
+//Computer selects Rock, Paper, Scissors
+    function computerPlay(){
+      let computerHand=Math.floor(Math.random()*3);
+      return (computerHand===0) ? 'Rock' : (computerHand===1) ? 'Paper' : 'Scissors';
+    }
+
+//Runs 5 matches and keeps score
+function game(roundNumber){
+  for (i = 0; i < 5; i++){
+   let playerSelection = prompt('Rock, Paper, Scissors?');
+    playRound() ;
+
+  }
+}
+//Play a single round
+function playRound(playerSelection, computerSelection) {
+  if(playerSelection==computerSelection){
+    return 'Yall picked the same stuff. Its a Tie!'
+  }
+  else{
+    if(playerSelection=='Rock'){
+      if(computerSelection=='Scissors'){
+        return 'You win, Rock beats Scissors!'}
+        else {
+          return 'Your rock got wrapped up in Paper! You Lose!'}
+
+      }
+  else {
+    if(playerSelection=='Scissors'){
+      if(computerSelection=='Paper'){
+        return 'You really cut up that paper! You Win!'}
+        else {
+          return 'Your Scissors got smashed to smitherens by a Rock. You Lose!'}
+
+      }
+  else {
+    if(playerSelection=='Paper'){
+      if(computerSelection=='Rock'){
+        return 'Against all logic, paper is victorious against rock! You Win!'}
+        else {
+          return 'Paper really should always be the loser. You Lose!'}
+
+      }
+    }
+    }
+  }
+}
+
+const computerSelection = computerPlay();
+let i=0;
+console.log(playRound(playerSelection, computerSelection))
+  
+//Format Inputs
+
+  
+  </script>
+</body>
+</html>
