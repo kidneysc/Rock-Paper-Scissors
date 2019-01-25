@@ -21,7 +21,7 @@ const buttons = document.querySelectorAll('button'); //selects nodelist of butto
        player.textContent = "The Puny Humans Score :  " + playerScore;
        const computer= document.createElement('div');
        computer.classList.add('computer');
-       computer.textContent = "The Devine Machines Score: " + computerScore;
+       computer.textContent = "The Divine Machines Score: " + computerScore;
        
        //Empties divs and updates score with latest results and total Scores.
        container.innerHTML = '';
